@@ -1,0 +1,39 @@
+  public boolean mostrarPre(String x) {
+        System.out.print(x + " raiz ");
+        return mostrarPre(raiz, x);
+    }
+    /**
+     * Metodo privado recursivo para exibir elementos.
+     * @param i No em analise.
+     */
+    private boolean mostrarPre(No i,String x) {
+        boolean resp = false;
+        if (i != null) {
+            resp = mostrarPreOutro(i.outro,x);
+            if ( resp == false ) {
+                System.out.print("esq ");
+                resp = mostrarPre(i.esq,x); // Elementos da esquerda.
+            } if ( resp == false ) {
+                System.out.print("dir ");
+                resp = mostrarPre(i.dir,x); // Elementos da direita.
+            }
+        }
+        return resp;
+    }
+    private boolean mostrarPreOutro(No2 i,String x) {
+        boolean resp = false;
+        if (i != null) {
+            if ( x.contains(i.elemento.getNome()) == true ) {
+                resp = true;
+            }
+            else {
+                System.out.print("ESQ ");
+                resp = mostrarPreOutro(i.esq,x); // Elementos da esquerda.
+                if ( resp == false ) {
+                    System.out.print("DIR ");
+                    resp = mostrarPreOutro(i.dir,x); // Elementos da direita.
+                }
+            }
+        }
+        return resp;
+    }

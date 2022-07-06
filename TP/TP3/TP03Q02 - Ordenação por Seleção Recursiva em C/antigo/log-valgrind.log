@@ -1,0 +1,291 @@
+==19348== Memcheck, a memory error detector
+==19348== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==19348== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==19348== Command: ./a.out
+==19348== Parent PID: 13640
+==19348== 
+==19348== Invalid read of size 1
+==19348==    at 0x10A7C4: remove_tags (Main.c:525)
+==19348==    by 0x109E4D: read_file (Main.c:284)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348==  Address 0x4aa64f4 is 0 bytes after a block of size 500 alloc'd
+==19348==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A440: new_string (Main.c:430)
+==19348==    by 0x109C3C: read_file (Main.c:235)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== Conditional jump or move depends on uninitialised value(s)
+==19348==    at 0x10A7C9: remove_tags (Main.c:525)
+==19348==    by 0x109E4D: read_file (Main.c:284)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348==  Uninitialised value was created by a heap allocation
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x48DD92D: __fopen_internal (iofopen.c:65)
+==19348==    by 0x48DD92D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+==19348==    by 0x109C53: read_file (Main.c:237)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 
+==19348== HEAP SUMMARY:
+==19348==     in use at exit: 546,924 bytes in 2,058 blocks
+==19348==   total heap usage: 2,361 allocs, 303 frees, 716,348 bytes allocated
+==19348== 
+==19348== 360 bytes in 30 blocks are definitely lost in loss record 2 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10AAF7: new_date (Main.c:618)
+==19348==    by 0x109DBC: read_file (Main.c:271)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 516 (16 direct, 500 indirect) bytes in 1 blocks are definitely lost in loss record 10 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A472: read_line (Main.c:438)
+==19348==    by 0x109838: main (Main.c:142)
+==19348== 
+==19348== 2,000 bytes in 4 blocks are definitely lost in loss record 12 of 69
+==19348==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A440: new_string (Main.c:430)
+==19348==    by 0x10A20E: read_file (Main.c:384)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 2,064 (64 direct, 2,000 indirect) bytes in 4 blocks are definitely lost in loss record 13 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A2F8: read_file (Main.c:402)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 4,128 (128 direct, 4,000 indirect) bytes in 8 blocks are definitely lost in loss record 15 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A4E5: clone_string (Main.c:451)
+==19348==    by 0x109FB1: read_file (Main.c:324)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 11,352 (352 direct, 11,000 indirect) bytes in 22 blocks are definitely lost in loss record 19 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A788: remove_tags (Main.c:517)
+==19348==    by 0x109F65: read_file (Main.c:319)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 11,352 (352 direct, 11,000 indirect) bytes in 22 blocks are definitely lost in loss record 20 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A4E5: clone_string (Main.c:451)
+==19348==    by 0x109F6D: read_file (Main.c:319)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 11,352 (352 direct, 11,000 indirect) bytes in 22 blocks are definitely lost in loss record 21 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10AA49: substring (Main.c:601)
+==19348==    by 0x109F98: read_file (Main.c:320)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 11,868 (368 direct, 11,500 indirect) bytes in 23 blocks are definitely lost in loss record 23 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A99E: string_to_float (Main.c:589)
+==19348==    by 0x10A134: read_file (Main.c:358)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 13,000 bytes in 26 blocks are definitely lost in loss record 26 of 69
+==19348==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A440: new_string (Main.c:430)
+==19348==    by 0x10A788: remove_tags (Main.c:517)
+==19348==    by 0x10A245: read_file (Main.c:393)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 13,416 (416 direct, 13,000 indirect) bytes in 26 blocks are definitely lost in loss record 27 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A20E: read_file (Main.c:384)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 13,416 (416 direct, 13,000 indirect) bytes in 26 blocks are definitely lost in loss record 28 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10AA49: substring (Main.c:601)
+==19348==    by 0x10A2E4: read_file (Main.c:398)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,000 bytes in 30 blocks are definitely lost in loss record 49 of 69
+==19348==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A440: new_string (Main.c:430)
+==19348==    by 0x109C3C: read_file (Main.c:235)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,000 bytes in 30 blocks are definitely lost in loss record 50 of 69
+==19348==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A440: new_string (Main.c:430)
+==19348==    by 0x10AA49: substring (Main.c:601)
+==19348==    by 0x109DAC: read_file (Main.c:269)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,000 bytes in 30 blocks are definitely lost in loss record 51 of 69
+==19348==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A440: new_string (Main.c:430)
+==19348==    by 0x10A4E5: clone_string (Main.c:451)
+==19348==    by 0x109ED2: read_file (Main.c:296)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,000 bytes in 30 blocks are definitely lost in loss record 52 of 69
+==19348==    at 0x483DD99: calloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A440: new_string (Main.c:430)
+==19348==    by 0x10A4E5: clone_string (Main.c:451)
+==19348==    by 0x10A124: read_file (Main.c:357)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,480 (480 direct, 15,000 indirect) bytes in 30 blocks are definitely lost in loss record 53 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A788: remove_tags (Main.c:517)
+==19348==    by 0x109CC3: read_file (Main.c:253)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,480 (480 direct, 15,000 indirect) bytes in 30 blocks are definitely lost in loss record 54 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A4E5: clone_string (Main.c:451)
+==19348==    by 0x109CCB: read_file (Main.c:253)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,480 (480 direct, 15,000 indirect) bytes in 30 blocks are definitely lost in loss record 55 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10AA49: substring (Main.c:601)
+==19348==    by 0x109D1E: read_file (Main.c:257)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,480 (480 direct, 15,000 indirect) bytes in 30 blocks are definitely lost in loss record 56 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A788: remove_tags (Main.c:517)
+==19348==    by 0x109D8A: read_file (Main.c:268)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,480 (480 direct, 15,000 indirect) bytes in 30 blocks are definitely lost in loss record 57 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A4E5: clone_string (Main.c:451)
+==19348==    by 0x109D92: read_file (Main.c:268)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,480 (480 direct, 15,000 indirect) bytes in 30 blocks are definitely lost in loss record 58 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A788: remove_tags (Main.c:517)
+==19348==    by 0x109E4D: read_file (Main.c:284)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,480 (480 direct, 15,000 indirect) bytes in 30 blocks are definitely lost in loss record 59 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A788: remove_tags (Main.c:517)
+==19348==    by 0x10A00C: read_file (Main.c:336)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,480 (480 direct, 15,000 indirect) bytes in 30 blocks are definitely lost in loss record 60 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A4E5: clone_string (Main.c:451)
+==19348==    by 0x10A014: read_file (Main.c:336)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,480 (480 direct, 15,000 indirect) bytes in 30 blocks are definitely lost in loss record 61 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10AA49: substring (Main.c:601)
+==19348==    by 0x10A03F: read_file (Main.c:337)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,480 (480 direct, 15,000 indirect) bytes in 30 blocks are definitely lost in loss record 62 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A788: remove_tags (Main.c:517)
+==19348==    by 0x10A094: read_file (Main.c:347)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,480 (480 direct, 15,000 indirect) bytes in 30 blocks are definitely lost in loss record 63 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A4E5: clone_string (Main.c:451)
+==19348==    by 0x10A09C: read_file (Main.c:347)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,480 (480 direct, 15,000 indirect) bytes in 30 blocks are definitely lost in loss record 64 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10AA49: substring (Main.c:601)
+==19348==    by 0x10A0C7: read_file (Main.c:348)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,480 (480 direct, 15,000 indirect) bytes in 30 blocks are definitely lost in loss record 65 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A788: remove_tags (Main.c:517)
+==19348==    by 0x10A11C: read_file (Main.c:357)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 15,480 (480 direct, 15,000 indirect) bytes in 30 blocks are definitely lost in loss record 66 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A1FC: read_file (Main.c:383)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 79,980 (2,480 direct, 77,500 indirect) bytes in 155 blocks are definitely lost in loss record 68 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A42A: new_string (Main.c:429)
+==19348==    by 0x10A788: remove_tags (Main.c:517)
+==19348==    by 0x10A245: read_file (Main.c:393)
+==19348==    by 0x109C02: new_Filme (Main.c:223)
+==19348==    by 0x109943: main (Main.c:153)
+==19348== 
+==19348== 95,400 (2,160 direct, 93,240 indirect) bytes in 30 blocks are definitely lost in loss record 69 of 69
+==19348==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19348==    by 0x10A344: clone (Main.c:413)
+==19348==    by 0x109465: inserirFim (Main.c:89)
+==19348==    by 0x10995A: main (Main.c:154)
+==19348== 
+==19348== LEAK SUMMARY:
+==19348==    definitely lost: 89,184 bytes in 939 blocks
+==19348==    indirectly lost: 457,740 bytes in 1,119 blocks
+==19348==      possibly lost: 0 bytes in 0 blocks
+==19348==    still reachable: 0 bytes in 0 blocks
+==19348==         suppressed: 0 bytes in 0 blocks
+==19348== 
+==19348== For lists of detected and suppressed errors, rerun with: -s
+==19348== ERROR SUMMARY: 378 errors from 34 contexts (suppressed: 0 from 0)

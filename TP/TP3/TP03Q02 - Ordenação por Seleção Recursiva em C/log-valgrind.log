@@ -1,0 +1,32 @@
+==20808== Memcheck, a memory error detector
+==20808== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==20808== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==20808== Command: ./a.out
+==20808== Parent PID: 13640
+==20808== 
+==20808== 
+==20808== HEAP SUMMARY:
+==20808==     in use at exit: 13,137 bytes in 181 blocks
+==20808==   total heap usage: 737 allocs, 556 frees, 1,181,039 bytes allocated
+==20808== 
+==20808== 130 bytes in 26 blocks are definitely lost in loss record 1 of 2
+==20808==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20808==    by 0x1094DC: substring (Main.c:72)
+==20808==    by 0x10A69A: movie_readHtml (Main.c:359)
+==20808==    by 0x10A98D: main (Main.c:404)
+==20808== 
+==20808== 13,007 bytes in 155 blocks are definitely lost in loss record 2 of 2
+==20808==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20808==    by 0x1094DC: substring (Main.c:72)
+==20808==    by 0x10A77B: movie_readHtml (Main.c:373)
+==20808==    by 0x10A98D: main (Main.c:404)
+==20808== 
+==20808== LEAK SUMMARY:
+==20808==    definitely lost: 13,137 bytes in 181 blocks
+==20808==    indirectly lost: 0 bytes in 0 blocks
+==20808==      possibly lost: 0 bytes in 0 blocks
+==20808==    still reachable: 0 bytes in 0 blocks
+==20808==         suppressed: 0 bytes in 0 blocks
+==20808== 
+==20808== For lists of detected and suppressed errors, rerun with: -s
+==20808== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)

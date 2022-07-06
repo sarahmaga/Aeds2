@@ -1,0 +1,20 @@
+Questões do tp:
+
+1- Seleção em java................ OK
+2- Seleção recursiva em C......... ok
+3- Inserção em java............... OK
+4- Shellsort em C................. ok
+5- Heapsort em java............... ok
+5- Quicksort em java.............. OK
+7- Counting sort em C............. ok
+8- Bolha em java.................. OK
+9- Mergesort em java.............. OK
+-----------------------------------------------------------------------
+TAD
+10- Lista em java................ ok 
+11- Pilha em java................ OK 
+12- Fila circular em java........ OK
+13- Quicksort lista dupla em java ok
+14- Pilha em c................... ok
+15- Quicksort lista dupla em C... ok
+16- Matriz dinamica em java...... ok
